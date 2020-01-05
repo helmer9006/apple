@@ -13,6 +13,13 @@ body {
     font-style: normal;
 }
 
+.cabecera{
+    color: red;
+}
+
+footer{
+    color: red;
+}
 .contenedor {
     display: grid;
     grid-template-columns: 100%;
