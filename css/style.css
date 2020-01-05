@@ -12,14 +12,6 @@ body {
     color: #1d1d1f;
     font-style: normal;
 }
-
-.cabecera{
-    color: red;
-}
-
-footer{
-    color: red;
-}
 .contenedor {
     display: grid;
     grid-template-columns: 100%;
