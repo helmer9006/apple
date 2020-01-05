@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="/css/bootstrap.css">
   <!-- Llamado a fontawesome -->
   <script src="https://kit.fontawesome.com/49830ff3b4.js" crossorigin="anonymous"></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/afecc65938.js"></script>
 
   <!-- Llamado a Google Icon -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -24,11 +26,84 @@
 
 <body>
 
+
   <!-- CONTENEDOR 1 -->
   <div class="contenedor2">
     <!-- contenedor -->
     <div class="cabecera">
-      <h1>cabecera</h1>
+
+      <!-- CABECERA NAHUEL -->
+
+
+      <nav id="navbar">
+        <!-- MENU HAMBURGER -->
+        <div class="container main-container">
+          <div class="menu-hamburguesa" id="menu-toggle" onclick="desplegar()">
+            <button class="hamburger hamburger--collapse" type="button">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+          </div>
+
+          <div class="logo">
+            <a class="apple" href="#home"><i class="fab fa-apple"></i></a>
+          </div>
+
+
+
+          <!-- Menu de navegación -->
+          <div class="down_panel" id="main-nav">
+
+            <div id="search">
+              <div class="search_container">
+                <div class="search_link"><i class="fas fa-search"></i></div>
+                <input id="boton" type="text" class="search_buscar" placeholder="Buscar en apple">
+                <div id="close" class="search_close" onclick="r()">Cancelar</div>
+              </div>
+            </div>
+            <ul class="menu_content">
+              <li class="menu_items"><a class="menu_link" href="#">Mac</a></li>
+              <li class="menu_items"><a class="menu_link" href="#">ipad</a></li>
+              <li class="menu_items"><a class="menu_link" href="#">iphone</a></li>
+              <li class="menu_items"><a class="menu_link" href="#">Watch</a></li>
+              <li class="menu_items"><a class="menu_link" href="#">TV</a></li>
+              <li class="menu_items"><a class="menu_link" href="#">Music</a></li>
+              <li class="menu_items"><a class="menu_link" href="#">Soporte</a></li>
+              <li class="menu_items_final"><a class="menu_link" href="#">Dónde comprar</a></li>
+            </ul>
+          </div>
+
+          <div class="icon-buscar">
+            <a class="apple" href="#home"><i class="fas fa-search"></i></a>
+          </div>
+
+        </div>
+      </nav>
+
+      <header id="header">
+        <div class="row text_content">
+          <div class="col-12">
+            <h1>iphone 11 Pro</h1>
+            <p>Cámaras Pro. Pantalla Pro. Rendimiento Pro.</p>
+            <a href="#">Más información ></a>
+          </div>
+          <div class="col-12">
+            <img class="img_header" src="img/iphone-11-projpg.jpg" alt="Celular">
+          </div>
+        </div>
+
+      </header>
+
+      <!-- FIN CONTENIDO NAHUEL -->
+
+
+      <div class="img-cabecera">
+        <h1>iphone 11 Pro</h1>
+        <p>Cámaras Pro. Pantalla Pro. Rendimiento Pro.</p>
+        <a href="https://www.apple.com/la/iphone-11-pro/">Más información</a>
+      </div>
+
 
     </div> <!-- cada uno de los ítems del grid -->
     <!-- SECCION IPHONE 11 -->
@@ -57,7 +132,6 @@
 
 
     <!-- CONTENEDOR 2 -->
-
 
     <div class="uno macbook ">
       <p>Modelo de 16 pulgadas</p>
@@ -129,15 +203,17 @@
 
   </div>
 
-
-
-
-
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
+  <!-- animacion menu hamburguesa y cruz -->
+  <script>
+    var $hamburger = $(".hamburger");
+    $hamburger.on("click", function (e) {
+      $hamburger.toggleClass("is-active");
+      // Do something else, like open/close menu
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>

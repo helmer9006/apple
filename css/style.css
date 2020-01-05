@@ -12,6 +12,7 @@ body {
     color: #1d1d1f;
     font-style: normal;
 }
+
 .contenedor {
     display: grid;
     grid-template-columns: 100%;
@@ -36,6 +37,12 @@ body {
     border-radius: 5px;
    
 }  */
+
+/* SECCION IMG CABECERA */
+
+.img-cabecera {
+    display: none;
+}
 
 /* seccion iphone 11 */
 
@@ -96,7 +103,7 @@ a {
 }
 
 .image-watch5-hero {
-    margin-top: 20px;
+    margin: 20px auto 0 auto;
     width: 300px;
     height: 264px;
     background-size: 300px 264px;
@@ -447,6 +454,251 @@ a {
     cursor: pointer;
 }
 
+/* ESTILOS NAHUEL */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+}
+
+/* ---------------------------------- Variables */
+
+:root {
+    --background: #000;
+    --color-text: #f5f5f7;
+    --border-bottom: #6e6e73;
+    --z-back: -10;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+/* ---------------------------------------- Navbar */
+
+#navbar {
+    background: var(--background);
+    position: sticky;
+    width: 100%;
+    min-height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: var(--z-fixed);
+}
+
+.apple {
+    color: var(--color-text);
+    font-size: 1.5em;
+}
+
+/* ------------------- Menu Hamburguesa */
+
+.menu-hamburguesa {
+    display: inline;
+    position: absolute;
+    top: 15%;
+    left: 10px;
+}
+
+.logo {
+    display: inline;
+    position: absolute;
+    top: 15%;
+    left: 47%;
+}
+
+/* ------------------------------------- Menu down Panel */
+
+.down_panel {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background: var(--background);
+    position: absolute;
+    top: 3.5rem;
+    right: 0;
+    transition: top 0.4s;
+    z-index: -1;
+}
+
+.menu_content {
+    position: absolute;
+    top: 3.52941em;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    max-width: 664px;
+    margin: 0 auto;
+    padding: 0 40px 8px;
+    height: auto;
+    list-style: none;
+}
+
+.down_panel .menu_link {
+    display: block;
+    text-decoration: none;
+    color: var(--color-text);
+    background-position: left center;
+    line-height: 44px;
+}
+
+.menu_items {
+    height: 44px;
+    border-bottom: 1px solid var(--border-bottom);
+}
+
+.menu_link {
+    height: 44px;
+}
+
+.icon-buscar {
+    display: none;
+}
+
+/* ------------------------------------ search */
+
+#search {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0 10px 0 10px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 3.11765em;
+    border-bottom: 1px solid var(--border-bottom);
+    z-index: 10;
+}
+
+.search_container {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 2.11765em;
+    border-radius: 8px;
+    background-color: #1d1d1f;
+}
+
+.search_link {
+    width: 29px;
+    text-align: center;
+    color: #fff;
+    padding-top: 0.3em;
+    font-size: 1em;
+    font-weight: 100;
+}
+
+.search_buscar {
+    background: transparent;
+    border: none;
+    color: #fff;
+    padding-left: 5px;
+}
+
+.search_close {
+    display: none;
+    color: blue;
+    background: black;
+    width: 100%;
+    text-align: center;
+}
+
+.close-open {
+    display: block;
+}
+
+/* ---------------------------------------------------Header */
+
+#header {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+#header .text_content {
+    width: 100%;
+    text-align: center;
+    background: #000;
+    padding: 2rem 0 0;
+    margin: 0;
+}
+
+#header h1 {
+    font-size: 2em;
+    color: var(--color-text);
+}
+
+#header p {
+    font-size: 1.3em;
+    margin-bottom: .5rem;
+    color: var(--color-text);
+}
+
+#header a {
+    font-size: 1.2em;
+    color: #2997ff;
+}
+
+#header .img_header {
+    width: 15rem;
+    padding-top: 4rem;
+}
+
+/* ---------------------------------------------------------MEDIA QUERIES----------------------------------------------- */
+
+@media screen and (min-width:768px) {
+    .main-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #search {
+        display: none;
+    }
+    .menu-hamburguesa {
+        display: none;
+    }
+    .logo {
+        position: initial;
+    }
+    .down_panel {
+        display: block;
+        position: initial;
+        height: auto;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+    }
+    .menu_content {
+        position: initial;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        min-width: 100%;
+    }
+    .menu_items {
+        border: 0;
+        margin: 0 auto;
+    }
+    .icon-buscar {
+        display: block;
+        margin: 0 1rem;
+    }
+    .apple {
+        margin: 0 1rem;
+    }
+    #header {
+        display: none;
+    }
+}
+
+/* FIN ESTIULOS NAHUEL */
 
 /* MEDIA QUERIES */
 
@@ -454,7 +706,7 @@ a {
     .contenedor2 {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 50px 1fr 1fr 580px 580px 580px 50px;
+        grid-template-rows: 1fr 1fr 1fr 580px 580px 580px 50px;
         grid-gap: 10px;
         grid-template-areas: "cabecera cabecera" "iphone11  iphone11" "watch5 watch5" "uno cuatro" "dos tres" "cinco seis" "footer footer";
     }
@@ -485,8 +737,7 @@ a {
     .seis {
         grid-area: seis;
     }
-
-    .footer{
+    .footer {
         grid-area: footer;
     }
     /* fin declaracion area */
@@ -495,6 +746,51 @@ a {
         border-radius: 5px;
         padding: 0.5em;
     } */
+    /* SECCION IMG CABECERA */
+    .img-cabecera {
+        display: block;
+        background-image: url('/img/hero__dvsxv8smkkgi_large.jpg');
+        position: relative;
+        background-position: center center;
+        background-size: cover;
+        width: 100%;
+        height: 700px;
+        left: calc(50% + 0px);
+        right: auto;
+        bottom: 0px;
+        top: auto;
+        -webkit-transform: translatex(-50%);
+        transform: translatex(-50%);
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .img-cabecera h1 {
+        padding-top: 50px;
+        color: #fff;
+        font-size: 52px;
+        line-height: 1.07143;
+        font-weight: 600;
+        letter-spacing: -.005em;
+        font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    }
+    .img-cabecera p {
+        color: #fff;
+        font-size: 24px;
+        line-height: 1.10722;
+        font-weight: 400;
+        letter-spacing: .004em;
+        font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        margin-top: 6px;
+    }
+    .img-cabecera a {
+    
+        font-size: 24px;
+        line-height: 1.10722;
+        font-weight: 400;
+        letter-spacing: .004em;
+        font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        margin-top: 6px;
+    }
     /* SECCION IPHONE 11 */
     .iphone11-img {
         align-items: center;
@@ -638,8 +934,6 @@ a {
         padding-top: 20px;
         background-image: url(/img/logo__dcojfwkzna2q_large.png);
     }
-
-    
     .cinco .img-tv {
         background-image: url(/img/tms_logo__d3lgcq7bwnsm_large.png);
         margin-top: 290px;
@@ -670,7 +964,5 @@ a {
         background-image: url(/img/icon_apple_music__bw26tvyfe8k2_large.png);
         /* padding-bottom: 50px; */
         margin-top: 340px;
-
     }
-    
 }
